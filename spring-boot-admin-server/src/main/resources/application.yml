@@ -1,14 +1,15 @@
-
 server:
   port: 9999
 spring:
   application:
-    name: spring-boot-admin-server
-
+    name: spring-boot-admin
+  profiles:
+    active:
+    - insecure
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka:password@172.23.0.2:8098/eureka/
+      defaultZone: http://eureka:password@192.168.86.56:8098/eureka/
 
 security:
   user:
