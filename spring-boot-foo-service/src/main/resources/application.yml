@@ -1,0 +1,28 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: foo-service
+    
+#  boot:
+#    admin:
+#      url: http://192.168.86.56:9999
+#      username: admin
+#      password: password
+#      client:
+#        metadata:
+#          user.name: ${security.user.name}
+#          user.password: ${security.user.password}
+
+#security:
+#  user:
+#    name: baz
+#    password: password
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka:password@192.168.86.56:8098/eureka/
+    
+    
