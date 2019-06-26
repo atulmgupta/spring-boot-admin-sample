@@ -1,17 +1,22 @@
 server:
-  port: 9999
-spring:
-  application:
-    name: spring-boot-admin
-  profiles:
-    active:
-    - insecure
+  port: ${PORT:8098}
+  
 eureka:
   client:
-    service-url:
-      defaultZone: http://eureka:password@192.168.86.56:8098/eureka/
-
+    registryFetchIntervalSeconds: 5
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://eureka:password@localhost:8098/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 10
 security:
   user:
-    name: admin
-    password: password
+    name: eureka
+    password: password  
+management:
+  security:
+    enabled: true
+spring:
+  boot:
+    admin:
+      context-path: /admin  #A different context path for Spring boot admin server has been provided avoiding conflict with eureka 

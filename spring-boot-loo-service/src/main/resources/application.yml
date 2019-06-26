@@ -7,7 +7,7 @@ spring:
     
 #  boot:
 #    admin:
-#      url: http://192.168.86.56:9999
+#      url: http://localhost:9999
 #      username: admin
 #      password: password
 #      client:
@@ -19,10 +19,16 @@ spring:
 #  user:
 #    name: baz
 #    password: password
-
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka:password@192.168.86.56:8098/eureka/
-    
-    
+      defaultZone: http://eureka:password@localhost:8098/eureka/
+management:
+  security:
+    enabled: false    
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://eureka:password@localhost:8098/eureka/
+#    
+#    

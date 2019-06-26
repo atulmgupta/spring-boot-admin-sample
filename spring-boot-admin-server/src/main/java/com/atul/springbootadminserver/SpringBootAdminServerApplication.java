@@ -2,7 +2,10 @@ package com.atul.springbootadminserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -13,9 +16,11 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import de.codecentric.boot.admin.config.AdminServerProperties;
 import de.codecentric.boot.admin.config.EnableAdminServer;
 
+@SpringBootApplication
 @Configuration
 @EnableAutoConfiguration
 @EnableDiscoveryClient
+@EnableEurekaServer
 @EnableAdminServer
 public class SpringBootAdminServerApplication {
 
