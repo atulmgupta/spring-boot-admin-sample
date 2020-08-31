@@ -1,2 +1,2 @@
-# spring-boot-admin-sample
-spring-boot-admin using eureka
+# spring-boot-admin-sample 
+SPRING BOOT ADMIN
