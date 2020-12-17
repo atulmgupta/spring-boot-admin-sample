@@ -1,2 +1,2 @@
 # spring-boot-admin-sample 
-SPRING BOOT ADMIN
+SPRING BOOT ADMIN.......
